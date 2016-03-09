@@ -2367,7 +2367,7 @@ ngx_http_upsync_dump_server(ngx_http_upsync_server_t *upsync_server)
         b->last = ngx_snprintf(b->last, b->end - b->last, 
                                " fail_timeout=%ds", peer->fail_timeout);
 
-        if (peers->peer[i].down) {
+        if (peer->down) {
             b->last = ngx_snprintf(b->last, b->end - b->last, " down");
         }
  
